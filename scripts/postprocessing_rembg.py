@@ -11,6 +11,7 @@ models = [
     "u2net_human_seg",
     "u2net_cloth_seg",
     "silueta",
+    "isnet-general-use"
 ]
 
 class ScriptPostprocessingUpscale(scripts_postprocessing.ScriptPostprocessing):

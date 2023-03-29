@@ -1,7 +1,7 @@
 import launch
 
 if not launch.is_installed("rembg"):
-    launch.run_pip("install rembg==2.0.30 --no-deps", "rembg")
+    launch.run_pip("install rembg==2.0.31 --no-deps", "rembg")
 
 for dep in ['onnxruntime', 'pymatting', 'pooch']:
     if not launch.is_installed(dep):
