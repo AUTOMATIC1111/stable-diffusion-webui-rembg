@@ -2,7 +2,9 @@ from modules import scripts_postprocessing, ui_components
 import gradio as gr
 
 from modules.ui_components import FormRow
+from modules.paths_internal import models_path
 import rembg
+import os
 
 models = [
     "None",
@@ -54,6 +56,9 @@ class ScriptPostprocessingUpscale(scripts_postprocessing.ScriptPostprocessing):
 
         if not model or model == "None":
             return
+
+        if "U2NET_HOME" not in os.environ:
+            os.environ["U2NET_HOME"] = os.path.join(models_path, "u2net")
 
         pp.image = rembg.remove(
             pp.image,
