@@ -8,6 +8,7 @@ import os
 
 models = [
     "None",
+    "isnet-general-use",
     "u2net",
     "u2netp",
     "u2net_human_seg",
